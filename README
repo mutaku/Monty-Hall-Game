@@ -1,23 +1,72 @@
 Monty Hall Game Player in Python
 
-Example:
+A fairly simple (and quickly written) monty hall player in python to exemplify the monty
+hall paradox. The win:loss ratio is from the perspective of a player who does not change
+doors after an initial empty reveal. We can see that as we look at the limit of N
+iterations approaching inifinite we get closer to the 1/3 win probability that we should
+expect from this playing strategy. This means that if we were to switch every time we are
+hitting the theoretical 2/3 win probability.
 
+
+Example runs on two systems:
+
+==============================================
+LAPTOP - Win7 64bit AMD A6-3400M APU
+==============================================
+Python 2.7.2 (default, Jun 12 2011, 14:24:46) [MSC v.1500 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
 >>> import monty_hall
 >>> monty_hall.play()
-Ran 10 iterations in 0.000596 {'wins': 3, 'losses': 7}
-<monty_hall.play instance at 0x0000000002740FC8>
+Ran 10 iterations in 0.000562s {'wins': 3, 'losses': 7}
+<monty_hall.play instance at 0x0000000002842C88>
 >>> monty_hall.play(iter=100)
-Ran 100 iterations in 0.005487 {'wins': 29, 'losses': 71}
-<monty_hall.play instance at 0x0000000002740208>
+Ran 100 iterations in 0.004841s {'wins': 36, 'losses': 64}
+<monty_hall.play instance at 0x0000000002844D08>
 >>> monty_hall.play(iter=1000)
-Ran 1000 iterations in 0.053641 {'wins': 310, 'losses': 690}
-<monty_hall.play instance at 0x0000000002740248>
+Ran 1000 iterations in 0.048763s {'wins': 354, 'losses': 646}
+<monty_hall.play instance at 0x0000000002842C48>
 >>> monty_hall.play(iter=10000)
-Ran 10000 iterations in 0.525820 {'wins': 3281, 'losses': 6719}
-<monty_hall.play instance at 0x0000000002741F48>
+Ran 10000 iterations in 0.485757s {'wins': 3364, 'losses': 6636}
+<monty_hall.play instance at 0x0000000002842108>
 >>> monty_hall.play(iter=100000)
-Ran 100000 iterations in 4.822500 {'wins': 33333, 'losses': 66667}
-<monty_hall.play instance at 0x0000000002741E08>
+Ran 100000 iterations in 4.584221s {'wins': 33619, 'losses': 66381}
+<monty_hall.play instance at 0x0000000002842C48>
 >>> monty_hall.play(iter=1000000)
-Ran 1000000 iterations in 48.216607 {'wins': 333774, 'losses': 666226}
-<monty_hall.play instance at 0x0000000002731708>
+Ran 1000000 iterations in 39.977481s {'wins': 333605, 'losses': 666395}
+<monty_hall.play instance at 0x0000000002842C88>
+>>> monty_hall.play(iter=10000000)
+Ran 10000000 iterations in 401.968510s {'wins': 3333142, 'losses': 6666858}
+<monty_hall.play instance at 0x0000000002842C48>
+
+
+==============================================
+DESKTOP - Xubuntu 11.04 AMD Athlon(tm) 64 X2 Dual Core Processor 6400+
+==============================================
+Python 2.7.1+ (r271:86832, Apr 11 2011, 18:05:24)
+[GCC 4.5.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import monty_hall
+>>> monty_hall.play()
+Ran 10 iterations in 0.000456s {'wins': 5, 'losses': 5}
+<monty_hall.play instance at 0xb732564c>
+>>> monty_hall.play(iter=10)
+Ran 10 iterations in 0.000446s {'wins': 4, 'losses': 6}
+<monty_hall.play instance at 0xb7325b8c>
+>>> monty_hall.play(iter=100)
+Ran 100 iterations in 0.004086s {'wins': 36, 'losses': 64}
+<monty_hall.play instance at 0xb732564c>
+>>> monty_hall.play(iter=1000)
+Ran 1000 iterations in 0.072123s {'wins': 322, 'losses': 678}
+<monty_hall.play instance at 0xb73250ec>
+>>> monty_hall.play(iter=10000)
+Ran 10000 iterations in 0.189216s {'wins': 3396, 'losses': 6604}
+<monty_hall.play instance at 0xb732564c>
+>>> monty_hall.play(iter=100000)
+Ran 100000 iterations in 1.349875s {'wins': 33244, 'losses': 66756}
+<monty_hall.play instance at 0xb73250ec>
+>>> monty_hall.play(iter=1000000)
+Ran 1000000 iterations in 12.468308s {'wins': 333757, 'losses': 666243}
+<monty_hall.play instance at 0xb732564c>
+>>> monty_hall.play(iter=10000000)
+Ran 10000000 iterations in 124.757703s {'wins': 3330950, 'losses': 6669050}
+<monty_hall.play instance at 0xb73250ec>
