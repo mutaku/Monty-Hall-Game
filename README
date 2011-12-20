@@ -12,6 +12,14 @@ initial choice. However, we see that the initial door choice maintains a 1/3 pro
 of containing the prize while the non-revealed door now has 1/3+1/3 (or 1-1/3) probability
 of being the prize door and showing that you should switch. Switch doors!
 
+UPDATE:
+Updated game logic. The host now ONLY reveals a door he/she knows is false which conforms 
+to the 'standard game' logic. Therefore we know have a more precise game simulation of 2 
+remaining doors, one chosen and one that is able to be switched to, and the player stays 
+with their initial choose in this scenario. Therefore, a win:loss ration represents that 
+of those two remaining doors and should be 1/3:2/3 for sticking with first door as opposed 
+to the more seemingly logical 1/2:1/2 now that we know the prize is behind one of two doors.
+
 
 Example runs on two systems:
 
