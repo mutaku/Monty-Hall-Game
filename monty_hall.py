@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 # Run game show simulations with sequential door picks to test monte hall paradox
+#
+#  #######    #######    #######
+#  #     #    #     #    #     #
+#  #  1  #    #  2  #    #  3  #
+#  #     #    #     #    #     #
+#  #######    #######    #######
+#
 
 from random import sample
 import string
