@@ -1,0 +1,23 @@
+Monty Hall Game Player in Python
+
+Example:
+
+>>> import monty_hall
+>>> monty_hall.play()
+Ran 10 iterations in 0.000596 {'wins': 3, 'losses': 7}
+<monty_hall.play instance at 0x0000000002740FC8>
+>>> monty_hall.play(iter=100)
+Ran 100 iterations in 0.005487 {'wins': 29, 'losses': 71}
+<monty_hall.play instance at 0x0000000002740208>
+>>> monty_hall.play(iter=1000)
+Ran 1000 iterations in 0.053641 {'wins': 310, 'losses': 690}
+<monty_hall.play instance at 0x0000000002740248>
+>>> monty_hall.play(iter=10000)
+Ran 10000 iterations in 0.525820 {'wins': 3281, 'losses': 6719}
+<monty_hall.play instance at 0x0000000002741F48>
+>>> monty_hall.play(iter=100000)
+Ran 100000 iterations in 4.822500 {'wins': 33333, 'losses': 66667}
+<monty_hall.play instance at 0x0000000002741E08>
+>>> monty_hall.play(iter=1000000)
+Ran 1000000 iterations in 48.216607 {'wins': 333774, 'losses': 666226}
+<monty_hall.play instance at 0x0000000002731708>
