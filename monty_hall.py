@@ -64,7 +64,7 @@ class play():
     
     def go(self):
         # iterate through games
-        for i in range(0,self.iter):
+        for i in xrange(0,self.iter):
             this = DoorManage()
             this.run()
             if this.result == 1:
