@@ -75,3 +75,6 @@ Ran 1000000 iterations in 12.468308s {'wins': 333757, 'losses': 666243}
 >>> monty_hall.play(iter=10000000)
 Ran 10000000 iterations in 124.757703s {'wins': 3330950, 'losses': 6669050}
 <monty_hall.play instance at 0xb73250ec>
+>>> monty_hall.play(iter=100000000)
+Ran 100000000 iterations in 1248.342247s {'wins': 33336009, 'losses': 66663991}
+<monty_hall.play instance at 0xb73a778c>
