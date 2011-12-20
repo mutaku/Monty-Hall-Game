@@ -60,7 +60,7 @@ class play():
         self.time = 0
         self.iter = iter
         t = timeit.Timer(self.go)
-        print 'Ran %d iterations in %f' %(self.iter,t.timeit(1)),self.score
+        print 'Ran %d iterations in %fs' %(self.iter,t.timeit(1)),self.score
     
     def go(self):
         # iterate through games
