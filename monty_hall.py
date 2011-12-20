@@ -22,7 +22,7 @@ class DoorManage():
             f(self)
             if self.picked == self.behind:
                 self.result = 1
-            elif self.open == self.behind:
+            else:
                 self.result = -1
         return action
     
@@ -30,7 +30,6 @@ class DoorManage():
         # random selection of a door from remaining doors pool
         return sample(self.doors,1)[0]
     
-    @check
     def pick(self):
         # initial user pick - random of 3
         self.picked = self.establish()
@@ -39,17 +38,14 @@ class DoorManage():
     def reveal(self):
         # open a door that it's not behind
         self.doors.remove(self.picked)
-        self.open = self.establish()
-        self.doors.remove(self.open)
-        if self.result == 0:
-            self.result = -1
+        if self.picked != self.behind:        
+                self.open = self.doors.remove(self.behind)
 
     def run(self):
         # hide behind door - random of 3
         self.behind = self.establish()
         self.pick()
-        if self.result == 0:
-            self.reveal()
+        self.reveal()		
 
 class play():
     # Play the game
