@@ -18,7 +18,7 @@ class DoorManage():
     def __init__(self):
         # set up variables - set door related to 0 so outside of operable range
         self.doors = [1,2,3]
-        self.result = 0
+        self.result = -1
         self.open = 0
         self.behind = 0
         self.picked = 0
@@ -29,8 +29,6 @@ class DoorManage():
             f(self)
             if self.picked == self.behind:
                 self.result = 1
-            else:
-                self.result = -1
         return action
     
     def establish(self):
