@@ -19,9 +19,6 @@ class DoorManage():
         # set up variables - set door related to 0 so outside of operable range
         self.doors = [1,2,3]
         self.result = -1
-        self.open = 0
-        self.behind = 0
-        self.picked = 0
     
     def check(f):
         # check for outcome condition
