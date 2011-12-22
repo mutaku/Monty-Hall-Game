@@ -68,9 +68,11 @@ class play():
     
     def go(self):
         # iterate through games
-        for i in xrange(0,self.iter):
+        i = 0
+        while i < self.iter:
             this = DoorManage()
             this.run()
             self.score[self.trans[this.result]] += 1
+            i += 1
         return self.score
     
