@@ -73,4 +73,3 @@ class play():
             self.score[self.trans[this.result]] += 1
             i += 1
         return self.score
-    
