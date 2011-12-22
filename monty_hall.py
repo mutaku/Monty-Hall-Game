@@ -60,6 +60,7 @@ class play():
     def __init__(self,iter=10):
         # setup to play
         self.score = {'wins':0,'losses':0}
+        self.trans = {-1:'losses',1:'wins'}
         self.time = 0
         self.iter = iter
         t = timeit.Timer(self.go)
@@ -70,9 +71,6 @@ class play():
         for i in xrange(0,self.iter):
             this = DoorManage()
             this.run()
-            if this.result == 1:
-                self.score['wins'] += 1
-            else:
-                self.score['losses'] += 1
+            self.score[self.trans[this.result]] += 1
         return self.score
     
