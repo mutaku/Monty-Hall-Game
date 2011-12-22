@@ -21,6 +21,15 @@ of those two remaining doors and should be 1/3:2/3 for sticking with first door 
 to the more seemingly logical 1/2:1/2 now that we know the prize is behind one of two doors.
 
 
+The 10 billion iteration answer:
+
+>>> monty_hall.play(iter=10000000000)
+
+Ran 10000000000 iterations in 104833.082781s {'wins': 3333340564L, 'losses': 6666659436L}
+<monty_hall.play instance at 0xb73f46cc>
+
+
+
 Example runs on two systems:
 
 ==============================================
