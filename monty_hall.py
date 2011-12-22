@@ -59,7 +59,6 @@ class play():
         # setup to play
         self.score = {'wins':0,'losses':0}
         self.trans = {-1:'losses',1:'wins'}
-        self.time = 0
         self.iter = iter
         t = timeit.Timer(self.go)
         print 'Ran %d iterations in %fs' %(self.iter,t.timeit(1)),self.score
