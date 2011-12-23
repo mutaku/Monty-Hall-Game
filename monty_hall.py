@@ -58,7 +58,8 @@ class play():
         self.trans = {-1:'losses',1:'wins'}
         self.iter = iter
         t = timeit.Timer(self.go)
-        print 'Ran %d iterations in %fs' %(self.iter,t.timeit(1)),self.score
+        self.time = t.timeit(1)
+        #print 'Ran %d iterations in %fs' %(self.iter,self.time),self.score
     
     def go(self):
         # iterate through games
