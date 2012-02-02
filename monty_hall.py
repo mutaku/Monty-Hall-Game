@@ -51,6 +51,8 @@ class DoorManage():
 
 class play():
     # Play the game
+    # Accessible variables after run:
+    #      time,score{'wins','losses'}
     
     def __init__(self,iter=10):
         # setup to play
