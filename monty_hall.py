@@ -54,14 +54,15 @@ class play():
     # Accessible variables after run:
     #      time,score{'wins','losses'}
     
-    def __init__(self,iter=10):
+    def __init__(self,iter=10,v=False):
         # setup to play
         self.score = {'wins':0,'losses':0}
         self.trans = {-1:'losses',1:'wins'}
         self.iter = iter
         t = timeit.Timer(self.go)
         self.time = t.timeit(1)
-        #print 'Ran %d iterations in %fs' %(self.iter,self.time),self.score
+        if v:
+            print 'Ran %d iterations in %fs : ' %(self.iter,self.time),self.score
     
     def go(self):
         # iterate through games
